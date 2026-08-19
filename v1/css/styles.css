@@ -328,7 +328,7 @@ ol {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 40px;
-  align-items: center;
+  align-items: start;
 }
 
 .hero__lead {
@@ -388,9 +388,15 @@ ol {
 
 .hero__visual {
   position: relative;
+  min-width: 0;
 }
 
 .hero__visual img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1024 / 682;
+  object-fit: cover;
+  object-position: center;
   border-radius: calc(var(--radius) + 6px);
   box-shadow: var(--shadow);
 }
