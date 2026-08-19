@@ -10,8 +10,13 @@
 
 * { box-sizing: border-box; }
 
+html {
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
+  overflow-x: clip;
   font-family: "Manrope", system-ui, sans-serif;
   color: var(--ink);
   background:
@@ -135,6 +140,23 @@ body {
   text-align: center;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 0 0 8px 0;
+  z-index: 200;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  left: 0;
 }
 
 @media (max-width: 768px) {

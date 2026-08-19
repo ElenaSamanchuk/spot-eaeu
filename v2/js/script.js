@@ -16,7 +16,16 @@
       link.addEventListener('click', function () {
         nav.classList.remove('is-open');
         burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Открыть меню');
       });
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 780) {
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Открыть меню');
+      }
     });
   }
 
@@ -77,7 +86,19 @@
         return;
       }
 
-      status.textContent = 'Заявка отправлена! Мы свяжемся с вами в ближайшее время.';
+      var name = form.querySelector('[name="name"]').value.trim();
+      var phone = phoneInput.value.trim();
+      var comment = form.querySelector('[name="comment"]').value.trim();
+      var subject = encodeURIComponent('Заявка с сайта СПОТ24');
+      var body = encodeURIComponent(
+        'Имя: ' + name + '\n' +
+        'Телефон: ' + phone + '\n\n' +
+        'Комментарий:\n' + (comment || '—')
+      );
+
+      window.location.href = 'mailto:info@spot-eaeu.ru?subject=' + subject + '&body=' + body;
+
+      status.textContent = 'Спасибо! Откроется почтовый клиент — отправьте письмо, и мы свяжемся с вами.';
       status.className = 'form__status is-success';
       form.reset();
     });
