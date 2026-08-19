@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://spot-eaeu.ru/sitemap.xml
+Sitemap: https://elenasamanchuk.github.io/spot-eaeu/sitemap.xml
