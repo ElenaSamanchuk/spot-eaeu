@@ -395,49 +395,58 @@ ol {
 
 .hero__visual {
   position: relative;
+  min-width: 0;
 }
 
-.hero__visual img {
+.hero__visual > img {
   width: 100%;
   max-width: 580px;
+  height: auto;
   margin-inline: auto;
+  display: block;
   border-radius: calc(var(--radius) + 6px);
   box-shadow: var(--shadow);
 }
 
 .hero__badge {
   position: absolute;
-  left: 20px;
-  bottom: 20px;
+  left: 16px;
+  bottom: 16px;
+  right: auto;
+  width: auto;
+  max-width: calc(100% - 32px);
   display: flex;
   align-items: center;
-  gap: 12px;
-  max-width: min(300px, calc(100% - 40px));
-  padding: 14px 16px;
-  border-radius: var(--radius-sm);
+  gap: 10px;
+  padding: 10px 12px;
   background: #fff;
-  border: 1px solid var(--line);
-  box-shadow: 0 4px 16px rgba(11, 31, 63, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
-.hero__badge-icon {
-  flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  padding: 3px;
-  border-radius: 6px;
-  border: 1px solid var(--line);
-  background: #fff;
+.hero__badge-qr {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #eef2ff;
+}
+
+.hero__badge-qr img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   display: block;
 }
 
-.hero__badge p {
+.hero__badge-text {
   margin: 0;
-  font-size: 0.8125rem;
-  line-height: 1.45;
-  font-weight: 500;
-  color: var(--text);
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: #5c6b82;
+  flex: 1;
+  min-width: 0;
 }
 
 /* Stats */
