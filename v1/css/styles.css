@@ -412,25 +412,32 @@ ol {
   display: flex;
   align-items: center;
   gap: 12px;
-  max-width: min(280px, calc(100% - 40px));
+  max-width: min(300px, calc(100% - 40px));
   padding: 14px 16px;
   border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: var(--shadow-sm);
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 16px rgba(11, 31, 63, 0.1);
 }
 
 .hero__badge-icon {
   flex-shrink: 0;
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  padding: 3px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
   object-fit: contain;
+  display: block;
 }
 
 .hero__badge p {
   margin: 0;
-  font-size: 0.82rem;
-  color: var(--text-muted);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--text);
 }
 
 /* Stats */
@@ -466,35 +473,6 @@ ol {
 }
 
 /* About */
-
-.about {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 32px;
-  align-items: start;
-}
-
-.about__media {
-  display: flex;
-  justify-content: center;
-}
-
-.qr-illustration {
-  width: 220px;
-  padding: 24px;
-  border-radius: var(--radius);
-  background: var(--bg-white);
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.qr-illustration img {
-  width: 160px;
-  height: auto;
-  display: block;
-}
 
 .about__grid {
   display: grid;
@@ -592,17 +570,6 @@ ol {
   color: var(--primary);
   font-family: var(--font-display);
   font-weight: 800;
-}
-
-.card__icon--qr {
-  padding: 5px;
-}
-
-.card__icon--qr img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  display: block;
 }
 
 .card--accent {
@@ -892,7 +859,6 @@ body.nav-open .burger span:nth-child(3) {
 
 @media (max-width: 1024px) {
   .hero__grid,
-  .about,
   .about__grid,
   .contacts,
   .cards--3,
@@ -910,13 +876,6 @@ body.nav-open .burger span:nth-child(3) {
     order: -1;
   }
 
-  .about {
-    grid-template-columns: 1fr;
-  }
-
-  .about__media {
-    justify-content: flex-start;
-  }
 }
 
 @media (max-width: 768px) {
