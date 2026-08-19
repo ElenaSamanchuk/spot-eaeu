@@ -115,7 +115,7 @@
             fetchpriority="high"
           />
           <div class="hero__badge">
-            <span>QR</span>
+            <img class="hero__badge-icon" src="assets/qr-icon.png" alt="" width="42" height="42" />
             <p>Выдаётся после резервирования обеспечительного платежа</p>
           </div>
         </div>
@@ -144,12 +144,18 @@
     </section>
 
     <section class="section" id="about">
-      <div class="container about">
+      <div class="container">
         <div class="section__head">
           <p class="eyebrow">О компании</p>
           <h2>Сопровождаем ввоз по правилам СПОТ — без лишних простоев на границе</h2>
         </div>
-        <div class="about__grid">
+        <div class="about">
+          <div class="about__media" aria-hidden="true">
+            <div class="qr-illustration">
+              <img src="assets/qr-icon.png" alt="" width="160" height="149" />
+            </div>
+          </div>
+          <div class="about__grid">
           <div class="about__text">
             <p>
               <strong>СПОТ ЕАЭС</strong> — специализированный сервис для бизнеса, который ввозит
@@ -178,6 +184,7 @@
             </ul>
             <a class="btn btn--secondary" href="#contacts">Обсудить поставку</a>
           </aside>
+          </div>
         </div>
       </div>
     </section>
@@ -212,7 +219,9 @@
             </p>
           </article>
           <article class="card">
-            <div class="card__icon" aria-hidden="true">03</div>
+            <div class="card__icon card__icon--qr" aria-hidden="true">
+              <img src="assets/qr-icon.png" alt="" width="32" height="32" />
+            </div>
             <h3>Получение и передача QR-кода</h3>
             <p>
               После резервирования платежа получаем QR-код, PDF-документ ДОПП,
@@ -399,11 +408,11 @@
         <form class="form" id="contact-form" novalidate>
           <div class="form__row">
             <label>
-              Ваше имя <span aria-hidden="true">*</span>
+              <span class="field-label">Ваше имя <span aria-hidden="true">*</span></span>
               <input type="text" name="name" autocomplete="name" required placeholder="Иван Иванов" />
             </label>
             <label>
-              Телефон <span aria-hidden="true">*</span>
+              <span class="field-label">Телефон <span aria-hidden="true">*</span></span>
               <input type="tel" name="phone" autocomplete="tel" required placeholder="+7 (___) ___-__-__" />
             </label>
           </div>

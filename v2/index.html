@@ -86,25 +86,43 @@
         </ul>
       </div>
 
-      <div class="hero__visual">
-        <img
-          src="assets/hero.png"
-          alt="Водитель грузовика с QR-кодом СПОТ на фоне флагов стран ЕАЭС"
-          width="1024"
-          height="682"
-          fetchpriority="high"
-        />
-        <div class="hero__badge">
-          <span>QR</span>
-          <p>Готов к предъявлению на границе</p>
+      <div class="hero__aside">
+        <div class="hero__visual">
+          <img
+            src="assets/hero.png"
+            alt="Водитель грузовика с QR-кодом СПОТ на фоне флагов стран ЕАЭС"
+            width="1024"
+            height="682"
+            fetchpriority="high"
+          />
+          <div class="hero__badge">
+            <span>QR</span>
+            <p>Готов к предъявлению на границе</p>
+          </div>
         </div>
-        <ul class="hero__flags-row" aria-label="Страны ЕАЭС">
-          <li><span class="flag-mini flag-mini--ru"></span>Россия</li>
-          <li><span class="flag-mini flag-mini--by"></span>Беларусь</li>
-          <li><span class="flag-mini flag-mini--kz"></span>Казахстан</li>
-          <li><span class="flag-mini flag-mini--am"></span>Армения</li>
-          <li><span class="flag-mini flag-mini--kg"></span>Киргизия</li>
-        </ul>
+
+        <div class="hero__flags" aria-label="Страны ЕАЭС, с которыми мы работаем">
+          <div class="flag-card">
+            <svg class="flag" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><rect width="3" height="0.667" y="0.667" fill="#0039A6"/><rect width="3" height="0.667" y="1.333" fill="#D52B1E"/></svg>
+            <span>Россия</span>
+          </div>
+          <div class="flag-card">
+            <svg class="flag" viewBox="0 0 3 2"><rect width="3" height="2" fill="#D22730"/><rect width="3" height="0.8" fill="#00AF66"/><rect width="0.3" height="2" fill="#fff"/></svg>
+            <span>Беларусь</span>
+          </div>
+          <div class="flag-card">
+            <svg class="flag" viewBox="0 0 3 2"><rect width="3" height="2" fill="#00AFCA"/><circle cx="1.5" cy="1" r="0.45" fill="#FEC50C"/></svg>
+            <span>Казахстан</span>
+          </div>
+          <div class="flag-card">
+            <svg class="flag" viewBox="0 0 3 2"><rect width="1" height="2" fill="#D90012"/><rect width="1" height="2" x="1" fill="#0033A0"/><rect width="1" height="2" x="2" fill="#F2A800"/></svg>
+            <span>Армения</span>
+          </div>
+          <div class="flag-card">
+            <svg class="flag" viewBox="0 0 3 2"><rect width="3" height="2" fill="#E8112D"/><circle cx="1.5" cy="1" r="0.5" fill="#FFEF00"/></svg>
+            <span>Киргизия</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
